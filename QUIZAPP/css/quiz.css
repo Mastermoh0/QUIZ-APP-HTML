@@ -231,4 +231,32 @@
 .performance-stats p {
     color: var(--text-light);
     margin: 0.5rem 0;
-} 
+.quiz-info {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.progress-container {
+    background: #444;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.timer-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #444;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+}
+
+.timer-container i {
+    color: var(--accent-color);
+    font-size: 1.5rem;
+}
+}

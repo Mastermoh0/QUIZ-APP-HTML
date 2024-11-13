@@ -419,6 +419,10 @@ class Quiz {
     }
 
     displayQuestion() {
+        // Update progress display
+        document.getElementById('current-question').textContent = this.currentQuestion + 1;
+        document.getElementById('total-questions').textContent = this.questions.length;
+        
         const question = this.questions[this.currentQuestion];
         document.getElementById('question').textContent = question.question;
         
