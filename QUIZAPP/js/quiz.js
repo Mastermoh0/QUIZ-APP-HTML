@@ -454,9 +454,23 @@ class Quiz {
     }
 
     getResultMessage(percentage) {
-        if (percentage >= 80) return "Excellent! Outstanding performance! 🏆";
-        if (percentage >= 60) return "Good job! Keep it up! 👍";
-        return "Keep practicing! You can do better! 💪";
+        // Get exact score out of 5
+        const scoreOutOf5 = this.score;
+        
+        switch(scoreOutOf5) {
+            case 5:
+                return "Perfect Score! 🏆 You're a Python master!";
+            case 4:
+                return "Excellent! 🌟 Almost perfect, you really know your stuff!";
+            case 3:
+                return "Good job! 👍 You're on the right track!";
+            case 2:
+                return "Keep practicing! 💪 You're getting there!";
+            case 1:
+                return "Don't give up! 🎯 Review the topics and try again!";
+            default:
+                return "Keep learning! 📚 Everyone starts somewhere!";
+        }
     }
 
     exitQuiz() {
