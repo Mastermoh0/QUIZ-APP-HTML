@@ -110,6 +110,26 @@ class Quiz {
                         "pow"
                     ],
                     correct: 1
+                },
+                {
+                    question: "What is the output of: print(3 == '3')",
+                    options: [
+                        "True",
+                        "False",
+                        "Error",
+                        "None"
+                    ],
+                    correct: 1
+                },
+                {
+                    question: "How do you get the length of a tuple in Python?",
+                    options: [
+                        "tuple.length()",
+                        "length(tuple)",
+                        "len(tuple)",
+                        "tuple.size()"
+                    ],
+                    correct: 2
                 }
             ],
             medium: [
@@ -212,6 +232,26 @@ class Quiz {
                         "Error"
                     ],
                     correct: 1
+                },
+                {
+                    question: "What is the purpose of the zip() function in Python?",
+                    options: [
+                        "To compress files",
+                        "To combine iterables",
+                        "To create dictionaries",
+                        "To sort lists"
+                    ],
+                    correct: 1
+                },
+                {
+                    question: "What will be the output of:\nprint(sum([1, 2, 3], 10))",
+                    options: [
+                        "16",
+                        "[11, 12, 13]",
+                        "Error",
+                        "[1, 2, 3, 10]"
+                    ],
+                    correct: 0
                 }
             ],
             hard: [
@@ -314,6 +354,26 @@ class Quiz {
                         "Only 'finally' prints"
                     ],
                     correct: 1
+                },
+                {
+                    question: "What is the output of:\nclass A:\n    x = 1\nclass B(A):\n    pass\nB.x = 2\nprint(A.x)",
+                    options: [
+                        "1",
+                        "2",
+                        "Error",
+                        "None"
+                    ],
+                    correct: 0
+                },
+                {
+                    question: "Which statement about Python's asyncio is correct?",
+                    options: [
+                        "It provides true parallel execution",
+                        "It uses multiple threads by default",
+                        "It provides concurrent execution on a single thread",
+                        "It bypasses the GIL"
+                    ],
+                    correct: 2
                 }
             ]
         };
