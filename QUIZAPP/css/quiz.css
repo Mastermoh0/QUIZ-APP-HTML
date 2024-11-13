@@ -174,4 +174,61 @@
     color: var(--text-dark);
     padding: 1rem 3rem;
     font-size: 1.2rem;
+}
+
+/* Results Container Additional Styling */
+.performance-stats {
+    background: #444;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+}
+
+.difficulty-badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.difficulty-badge.easy {
+    background: var(--success-color);
+    color: var(--text-dark);
+}
+
+.difficulty-badge.medium {
+    background: var(--warning-color);
+    color: var(--text-dark);
+}
+
+.difficulty-badge.hard {
+    background: var(--error-color);
+    color: var(--text-light);
+}
+
+.time-stats {
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem 0;
+    font-size: 1.1rem;
+}
+
+.accuracy-meter {
+    background: #333;
+    height: 10px;
+    border-radius: 5px;
+    margin-top: 1rem;
+    overflow: hidden;
+}
+
+.accuracy-bar {
+    height: 100%;
+    background: var(--accent-color);
+    transition: width 1s ease-in-out;
+}
+
+.performance-stats p {
+    color: var(--text-light);
+    margin: 0.5rem 0;
 } 

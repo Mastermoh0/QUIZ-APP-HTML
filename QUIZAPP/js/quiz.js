@@ -6,6 +6,8 @@ class Quiz {
         this.score = 0;
         this.timer = null;
         this.selectedAnswer = null;
+        this.questionTimes = [];
+        this.startTime = null;
     }
 
     getQuestions() {
@@ -331,6 +333,7 @@ class Quiz {
     }
 
     startTimer() {
+        this.startTime = Date.now();
         clearInterval(this.timer);
         let timeLeft = 15;
         const timerDisplay = document.getElementById('timer');
@@ -412,6 +415,7 @@ class Quiz {
     }
 
     nextQuestion() {
+        this.recordQuestionTime();
         if (this.selectedAnswer !== null) {
             if (this.selectedAnswer === this.questions[this.currentQuestion].correct) {
                 this.score++;
@@ -429,7 +433,13 @@ class Quiz {
         }
     }
 
+    recordQuestionTime() {
+        const timeSpent = Math.min(15, Math.ceil((Date.now() - this.startTime) / 1000));
+        this.questionTimes.push(timeSpent);
+    }
+
     showResults() {
+        this.recordQuestionTime();
         clearInterval(this.timer);
         
         document.getElementById('quiz-container').style.display = 'none';
@@ -437,10 +447,24 @@ class Quiz {
         resultsContainer.style.display = 'block';
 
         const percentage = (this.score / this.questions.length) * 100;
+        const avgTime = this.questionTimes.reduce((a, b) => a + b, 0) / this.questionTimes.length;
+        const fastestTime = Math.min(...this.questionTimes);
         
         const scoreDisplay = resultsContainer.querySelector('.score-display');
         scoreDisplay.innerHTML = `
             <h3>Your Score: ${this.score}/${this.questions.length} (${percentage.toFixed(1)}%)</h3>
+            <div class="performance-stats">
+                <div class="difficulty-badge ${this.difficulty}">
+                    ${this.difficulty.charAt(0).toUpperCase() + this.difficulty.slice(1)}
+                </div>
+                <div class="time-stats">
+                    <p>⚡ Fastest Answer: ${fastestTime}s</p>
+                    <p>⏱️ Average Time: ${avgTime.toFixed(1)}s</p>
+                </div>
+                <div class="accuracy-meter">
+                    <div class="accuracy-bar" style="width: ${percentage}%"></div>
+                </div>
+            </div>
             <p class="message ${this.getMessageClass(percentage)}">
                 ${this.getResultMessage(percentage)}
             </p>
