@@ -6,6 +6,7 @@
     <title>Quiz App</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/quiz.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
     <!-- Quiz Menu Section -->
@@ -30,7 +31,10 @@
     <!-- Quiz Section -->
     <div id="quiz-container" class="container" style="display: none;">
         <div class="quiz-header">
-            <div id="timer">15</div>
+            <div class="timer-container">
+                <i class="fas fa-clock"></i>
+                <div id="timer">15</div>
+            </div>
             <button class="exit-btn">X</button>
         </div>
         <div class="question-container">
