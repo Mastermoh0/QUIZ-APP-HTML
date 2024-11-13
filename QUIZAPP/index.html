@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/quiz.css">
+</head>
+<body>
+    <!-- Quiz Menu Section -->
+    <div id="menu-container" class="container">
+        <h2>Welcome to Quiz Station</h2>
+        <div class="difficulty-selection">
+            <h3>Select Difficulty Level</h3>
+            <div class="radio-group">
+                <input type="radio" id="easy" name="difficulty" value="easy">
+                <label for="easy">Easy</label>
+
+                <input type="radio" id="medium" name="difficulty" value="medium">
+                <label for="medium">Medium</label>
+
+                <input type="radio" id="hard" name="difficulty" value="hard">
+                <label for="hard">Hard</label>
+            </div>
+            <button id="start-quiz">Let's Go!</button>
+        </div>
+    </div>
+
+    <!-- Quiz Section -->
+    <div id="quiz-container" class="container" style="display: none;">
+        <div class="quiz-header">
+            <div id="timer">15</div>
+            <button class="exit-btn">X</button>
+        </div>
+        <div class="question-container">
+            <h3 id="question"></h3>
+            <div class="options-container">
+                <!-- Options will be inserted here -->
+            </div>
+        </div>
+        <div class="quiz-footer">
+            <button id="next-btn">Next</button>
+            <button id="submit-btn">Submit</button>
+        </div>
+    </div>
+
+    <!-- Results Section -->
+    <div id="results-container" class="container" style="display: none;">
+        <h2>Quiz Completed!</h2>
+        <div class="score-display">
+            <!-- Score will be inserted here -->
+        </div>
+        <button id="play-again" class="play-again-btn">Play Again</button>
+    </div>
+
+    <script src="js/quiz.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html> 

@@ -1,0 +1,52 @@
+:root {
+    --primary-color: #2d2d2d;
+    --secondary-color: #1a1a1a;
+    --accent-color: #FFD700;
+    --text-light: #ffffff;
+    --text-dark: #333333;
+    --success-color: #00ff00;
+    --warning-color: #ffff00;
+    --error-color: #ff0000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica', sans-serif;
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+}
+
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+
+.exit-btn {
+    background-color: var(--error-color);
+    color: var(--text-light);
+    padding: 5px 10px;
+    border-radius: 50%;
+} 
