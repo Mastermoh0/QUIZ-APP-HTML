@@ -53,17 +53,28 @@
     margin-bottom: 2rem;
 }
 
+.timer-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #444;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+}
+
+.timer-container i {
+    color: var(--accent-color);
+    font-size: 1.5rem;
+}
+
 #timer {
     font-size: 2rem;
     font-weight: bold;
-    padding: 1rem;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #444;
+    color: var(--text-light);
+    background: none;
+    width: auto;
+    height: auto;
+    padding: 0;
 }
 
 .question-container {
